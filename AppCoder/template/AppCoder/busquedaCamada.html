@@ -1,0 +1,14 @@
+{% extends "appCoder/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<form action="{% url 'Buscar' %}" method="GET"> 
+    <h1>Ingrese los datos de la camada que busca</h1>
+    <input type="number" name="camada" placeholder="CAMADA" id="camada">
+    <input type="submit" value="Buscar">
+</form>
+{% endblock %}
+
+{% block section_name %}
+<h3> Buscador de camadas </h3>
+{% endblock %}

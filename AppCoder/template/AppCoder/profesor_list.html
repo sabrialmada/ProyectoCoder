@@ -1,0 +1,28 @@
+{% extends "appCoder/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>PAGINA DE PROFESORES</h3>
+{% for profesor in object_list %}
+<li>{{profesor}}</li>
+
+<button>
+    <a href="% url 'profesor_detalle' profesor.id %">Detalles</a>
+</button>
+<button>
+    <a href="% url 'profesor_editar' profesor.id %">Editar</a>
+</button>
+<button>
+    <a href="% url 'profesor_borrar' profesor.id %">Borrar</a>
+</button>
+{% endfor %}
+
+<br>
+<br>
+<button>
+    <a href="% url 'profesor_crear' profesor.id %">Crear</a>
+</button>
+{% endblock %}
+
+{% block section_name %}
+<h3>PROFESORES</h3>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "appCoder/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>PAGINA DE PROFESORES</h3>
+<p>NOMBRE: <i>{{profesor.nombre}}</i></p>
+<p>APELLIDO: {{profesor.apellido}}</p>
+<p>MATERIA: {{profesor.materia}}</p>
+
+<p>
+    <a href="{% url 'profesor_listar' %}">Volver a la lista de profesores</a>
+</p>
+{% endblock %}
+
+{% block section_name %}
+<h3>PROFESORES</h3>
+{% endblock %}
